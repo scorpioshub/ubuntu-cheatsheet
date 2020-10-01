@@ -39,6 +39,17 @@ Ubuntu commands for people who don't know Linux
 * See all running processes: `ps aux`
 * Get PIDs of running processes under a specific name: `ps aux | grep {name}` or `ps aux | grep {name} | awk '{print $2}'`
 
+## ssh setup for client:
+Check on both openssh-client and openssh-server From server 
+* ssh-keygen
+* ssh-copy-id -i user@ip
+* ssh-add
+
+##To free up memory cache and buffer
+* sync; echo 1 > /proc/sys/vm/drop_caches
+* sync; echo 2 > /proc/sys/vm/drop_caches
+* sync; echo 3 > /proc/sys/vm/drop_caches
+
 ## Machine Properties
 * Modify the host name: `sudo nano /etc/hostname`
 * Set a static IP address: `sudo nano /etc/network/interfaces`
